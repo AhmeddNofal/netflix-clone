@@ -18,7 +18,7 @@ function Signin() {
     const handleSignIn = (e) => {
         e.preventDefault();
 
-        firebase.auth().signInWithEmailAndPassword(emailAddress, password)
+        firebase.auth().signInWithEmailAndPassword(emailAddress.trim(), password)
         .then(() => {
             history.push(ROUTES.BROWSE);
         })
